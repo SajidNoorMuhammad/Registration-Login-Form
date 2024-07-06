@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+@font-face {
+    font-family: myfont;
+    src: url(Fonts/RanchinoScript_PERSONAL_USE_ONLY.otf);
+}
+
+.box {
+    background-color: white;
+    width: 50%;
+}
+
+label {
+    font-size: 20px;
+}
+
+.box {
+    background-color: white;
+    margin-left: 20%;
+    margin-top: 2%;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x))
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y)
+}
+
+.col {
+    flex: 1 0 0%
+}
+
+input {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+label {
+    display: inline-block
+}
+
+.row {
+    padding-top: 10px;
+}
+
+.start {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    font-family: myfont;
+}
+
+.btn-1{
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-top: 4%;
+    font-weight: bold;
+}
+
+.btn-1:hover{
+    background-color: black;
+    color: white;
+}
+
+.login{
+    text-align: right;
+    margin-left: 65%;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input{
+    padding: 5px;
+}
+
