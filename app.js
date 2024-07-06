@@ -45,5 +45,5 @@ function signup() {
 }
 
 function login(){
-    location.assign("file:///D:/Registration%20Form/login.html")
+    location.assign("https://github.com/SajidNoorMuhammad/Registration-Login-Form")
 }
