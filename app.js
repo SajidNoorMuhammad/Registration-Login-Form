@@ -43,3 +43,7 @@ function signup() {
     address.value= "";
     city.value= "";
 }
+
+function login(){
+    location.assign("file:///D:/Registration%20Form/login.html")
+}
