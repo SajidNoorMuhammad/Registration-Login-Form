@@ -45,5 +45,5 @@ function signup() {
 }
 
 function login(){
-    location.assign("https://github.com/SajidNoorMuhammad/Registration-Login-Form")
+    // location.assign("https://github.com/SajidNoorMuhammad/Registration-Login-Form")
 }
