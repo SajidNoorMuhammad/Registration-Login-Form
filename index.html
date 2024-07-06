@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="box">
+    <div id="box" class="box">
         <h1 class="start">Registration Form</h1>
         <div class="row">
             <div class="col">
@@ -84,10 +84,39 @@
             </div>
         </div>
         <button class="btn-1" onclick="signup()">Submit</button>
-        <a class="login" href="file:///D:/Registration%20Form/login.html">Login</a>
+        <button onclick="login()" class="btn-2" href="">Login</button>
+
+    </div>
 
 
-        <script src="app.js"></script>
+
+
+    <div id="loginbox" class="loginbox">
+        <h1 class="start str">Login Form</h1>
+        <label>
+            Email
+            <br>
+            <input id="l-email" type="email" placeholder="Enter Email">
+        </label>
+        <br>
+        <label>
+            UserName
+            <br>
+            <input id="l-username" type="text" placeholder="Enter UserName">
+        </label>
+        <br>
+        <label>
+            Password
+            <br>
+            <input id="l-password" type="password" placeholder="Enter Password">
+        </label>
+
+        <button onclick="loginPage()" class="btn-3">Login</button>
+        <a>Don't Have Account?</a><a onclick="register()" class="tag-1" href="">Register Here</a>
+
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

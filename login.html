@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz App</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+	<div class="quiz-container">
+		<div class="quiz-question" id="question-1">
+			<h2>Question 1</h2>
+			<p>What is the capital of France?</p>
+			<ul id="options">
+				<li><input type="radio" name="option" onclick="checkAnswer(1, 1)"> Paris</li>
+				<li><input type="radio" name="option" onclick="checkAnswer(1, 2)"> Berlin</li>
+				<li><input type="radio" name="option" onclick="checkAnswer(1, 3)"> London</li>
+				<li><input type="radio" name="option" onclick="checkAnswer(1, 4)"> Rome</li>
+			</ul>
+		</div>
+		
+		<div class="quiz-question" id="question-2" style="display:none">
+			<h2>Question 2</h2>
+			<p>What is the largest planet in our solar system?</p>
+			<ul id="options">
+				<li><input type="radio" name="option" onclick="checkAnswer(2, 1)"> Earth</li>
+				<li><input type="radio" name="option" onclick="checkAnswer(2, 2)"> Saturn</li>
+				<li><input type="radio" name="option" onclick="checkAnswer(2, 3)"> Jupiter</li>
+				<li><input type="radio" name="option" onclick="checkAnswer(2, 4)"> Uranus</li>
+			</ul>
+		</div>
+		
+		<!-- Add the rest of the questions here -->
+		
+		<div class="result" id="result" style="display:none">
+			Your score is <span id="score"></span> out of 5
+		</div>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+.quiz-container {
+	width: 80%;
+	margin: 40px auto;
+	background-color: #f0f0f0;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-question {
+	margin-bottom: 20px;
+}
+
+#options {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#options li {
+	margin-bottom: 10px;
+}
+
+#options input[type="radio"] {
+	margin-right: 10px;
+}
+
+.result {
+	font-size: 24px;
+	font-weight: bold;
+	color: #00698f;
+	margin-top: 20px;
+	display:none;
+}
+
+</style>
+
+<script>
+
+let currentQuestion = 1;
+let score = 0;
+
+function checkAnswer(questionNumber, answer) {
+	if (answer === 1) {
+		score++;
+	}
+	showNextQuestion(questionNumber);
+}
+
+function showNextQuestion(questionNumber) {
+	const questions = document.querySelectorAll(".quiz-question");
+	questions[questionNumber - 1].style.display = "none";
+	questions[questionNumber].style.display = "block";
+}
+
+function showResult() {
+	const resultElement = document.getElementById("result");
+	resultElement.style.display = "block";
+	document.getElementById("score").innerHTML = score;
+}
+
+// Add event listener to last question
+document.querySelectorAll(".quiz-question")[5].addEventListener("click", showResult);
+</script>
